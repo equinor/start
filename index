@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Sleipner A/R – Startside</title>
+
+    <!-- Global NAS-style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        /* Extra menu styling on top of your global style.css */
+
+        .menu-wrapper {
+            padding: 40px 20px 60px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .menu-intro {
+            margin-bottom: 24px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-card {
+            display: block;
+            text-decoration: none;
+            background: radial-gradient(circle at top left, var(--accent-soft2), transparent 55%)
+                        var(--panel);
+            padding: 20px 22px;
+            border-radius: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            box-shadow:
+                0 18px 45px rgba(15, 23, 42, 0.85),
+                0 0 0 1px rgba(15, 23, 42, 0.95);
+            transition:
+                transform 0.12s ease-out,
+                box-shadow 0.15s ease-out,
+                border-color 0.12s ease-out,
+                background 0.12s ease-out;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-strong);
+            box-shadow:
+                0 24px 60px rgba(56, 189, 248, 0.35),
+                0 0 0 1px rgba(15, 23, 42, 1);
+        }
+
+        .menu-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-strong);
+            margin-bottom: 6px;
+        }
+
+        .menu-tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .menu-desc {
+            font-size: 14px;
+            color: var(--text-soft, #e5e7eb);
+        }
+
+        @media (max-width: 480px) {
+            .menu-wrapper {
+                padding-top: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR (same pattern as NAS-ventiler) -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <div class="topbar-logo-wrap">
+                <img src="assets/img/Sleipner_logo.jpg"
+                     alt="Sleipner logo"
+                     class="topbar-logo" />
+            </div>
+            <div class="topbar-text">
+                <div class="topbar-title">SLEIPNER A/R</div>
+                <div class="topbar-sub">Driftsverktøy og kontrollsystemer</div>
+                <div class="topbar-sub">Status: Startside</div>
+            </div>
+        </div>
+
+        <div class="topbar-right">
+            <div class="help-icon"
+                 title="Hjelp"
+                 onclick="window.open('Kjemi/bruksveiledning.html','_blank')">
+                ?
+            </div>
+            <div class="topbar-version">v1.0 – 2026</div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-centered">
+        <div class="menu-wrapper">
+            <h1 class="shared-page-title">Sleipner A/R – digitale støtteverktøy</h1>
+            <p class="menu-intro">
+                Startside for interne verktøy: kjemikalier, oljelogg og NAS/PAS-ventiler.
+                Denne siden er kun for demonstrasjon og dokumentasjon (ingen sensitiv data).
+            </p>
+
+            <div class="menu-grid">
+
+                <!-- KJEMI -->
+                <a class="menu-card" href="Kjemi/kjemi.html">
+                    <div class="menu-tag">Kjemi</div>
+                    <div class="menu-title">Kjemikalietelling</div>
+                    <p class="menu-desc">
+                        Digital oversikt over kjemikaliebeholdning, TOTE‑tanker og mengder.
+                        Støtte for logg, sporbarhet og brukerveiledning.
+                    </p>
+                </a>
+
+                <!-- OLJELOGG -->
+                <a class="menu-card" href="Oljelogg/oljelager.html">
+                    <div class="menu-tag">Oljelogg</div>
+                    <div class="menu-title">Oljelager og ukeslogg</div>
+                    <p class="menu-desc">
+                        Registrering av tellinger, volum og forbruk.
+                        Grunnlag for oppfølging, historikk og kvalitetssikring.
+                    </p>
+                </a>
+
+                <!-- NAS/PAS -->
+                <a class="menu-card" href="NAS_PAS/ventiler.html">
+                    <div class="menu-tag">NAS/PAS</div>
+                    <div class="menu-title">Ventiloversikt</div>
+                    <p class="menu-desc">
+                        Liste over ventiler med søk, kart, bilder og offline‑støtte.
+                        Endring av posisjoner og kobling mot ECHO.
+                    </p>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        Sleipner A/R – Intern bruk · © 2026
+    </footer>
+
+</body>
+</html>
