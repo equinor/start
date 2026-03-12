@@ -29,6 +29,7 @@
         .menu-card {
             display: block;
             text-decoration: none;
+            color: var(--text);
             background: radial-gradient(circle at top left, var(--accent-soft2), transparent 55%) var(--panel);
             padding: 22px 24px;
             border-radius: 18px;
@@ -76,6 +77,7 @@
             color: var(--text);
             font-size: 28px;
             margin-bottom: 8px;
+            margin-top: 10px;
         }
 
         .menu-intro {
@@ -87,29 +89,45 @@
 
 <body>
 
-    <!-- TOP BAR – samme som NAS-style -->
+    <!-- 🔷 FELLES HEADER -->
     <div class="topbar">
         <div class="topbar-left">
             <div class="topbar-logo-wrap">
                 <img src="assets/img/Sleipner_logo.jpg" alt="Logo" class="topbar-logo" />
             </div>
+
             <div class="topbar-text">
                 <div class="topbar-title">SLEIPNER A/R</div>
-                <div class="topbar-sub">Digitale driftsverktøy</div>
-                <div class="topbar-sub">Status: Startside</div>
+                <div class="topbar-sub" id="header-subtitle">Digitale driftsverktøy</div>
+                <div class="topbar-sub">Status: <span id="header-status">Startside</span></div>
             </div>
         </div>
 
         <div class="topbar-right">
-            <div class="help-icon" onclick="window.open('Kjemi/bruksveiledning.html', '_blank')">?</div>
-            <div class="topbar-version">v1.0 – 2026</div>
+            <button class="help-icon"
+                    id="header-help-btn"
+                    title="Brukerveiledning">
+                ?
+            </button>
+            <div class="topbar-version">v1.0 — 2026</div>
         </div>
     </div>
+
+    <script>
+        // Standard hjelpeknapp → peker mot Kjemi bruksveiledning (kan endres)
+        document.getElementById("header-help-btn")
+            .addEventListener("click", () => {
+                window.open("Kjemi/bruksveiledning.html", "_blank");
+            });
+    </script>
+
 
     <!-- MAIN -->
     <main class="main-centered">
         <div class="menu-wrapper">
+
             <h1 class="shared-page-title">Sleipner A/R – digitale støtteverktøy</h1>
+
             <p class="menu-intro">
                 Velg et av områdene under for å åpne systemet. Alle sider følger samme NAS/PAS-design.
             </p>
@@ -145,10 +163,10 @@
                 </a>
 
             </div>
-
         </div>
     </main>
 
+    <!-- 🔷 FELLES FOOTER -->
     <footer class="footer">
         Sleipner A/R – Intern bruk · © 2026
     </footer>
